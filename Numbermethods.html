@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Number methods</h3> 
+    <script>
+        //to fixed:converts a number into a string, rounding the number to a specified number of decimals
+          let fixed=5.6789;
+          console.log('to fixed:',fixed.toFixed(2))
+
+        //To precision:Formats a number to a specified length
+          let num = 123.456;
+          console.log(num.toPrecision(5)); 
+          
+        //to string: converts a number to a string 
+          let number=123
+          let str=number.toString()
+          console.log(str, typeof(str)) 
+
+        //parseint: Parses a string and returns an integer
+          let str1 = "10";
+          console.log(parseInt(str1));
+
+        //isNaN:checks whether a value is NaN (not a number).
+          let num1 = NaN;
+          console.log(isNaN(num1));
+
+        //isfinite(): checks whether a value is finite.
+           let num2 = 19;
+           console.log( 'isfinite',isFinite(num2));
+
+        //Number .isInteger(): checks whether a value is integer.
+           console.log(Number. isInteger(-10));
+           console.log(Number. isInteger(10.5));
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Examples of functions</h3>
+    <p>functions in javascript provide organized, reusable code to perform a set of actions. 
+        functions simplify the coding process, prevent redudant logic, and make code easier to follow.
+    </p>
+
+    <p>function parameter is a variable listed in the paranthesis of a function declaration,
+        and an arguement is the actual value or expression passed to the function when it is called.<br><br>
+        
+        A function return statement is used to specify the value that a function should return 
+        when it is called.
+    </p>
+</body>
+<script>
+    //functions
+       function greet(){
+        console.log('helloo from function')
+       }
+       greet()
+
+    //parameters and arguements 
+      function greet(name){ // parameters
+        console.log('good morning'+' '+name)
+      }   
+      greet('john') // argument
+
+      function greet(name, age, address){
+        console.log(name +''+age +''+address)
+      }
+      console.log('abhi',21,'telangana')
+   
+    // // return
+    //   function greet(name){
+
+    //   }
+
+
+   // Arithmetic operation with function
+      function operation(a,b){
+        return a+b;
+      }
+      let add=operation(3,4)
+      console.log('Addition is:',add)
+
+    //area of circle
+     function circle(radius){
+        return 3.14*radius*radius
+     }
+     let area_of_circle=circle(5)
+     console.log('Area of circle is', area_of_circle)
+
+     //area of rectangle
+      function rectangle(height,width){
+        return height*width
+      }
+      let area_of_rectangle=rectangle(12,11)
+        console.log('area of rectangle',area_of_rectangle)
+     
+//even numbers
+//number is even?
+     /*function even(number){
+       return number%2==0
+     }
+       let x=even(12)
+       console.log(x)*/
+
+    function even(number){
+        if(number%2==0){
+            return "even"
+        }else{
+            return "odd"
+        }
+    }
+    console.log(even(35))
+
+    //positive, negative and zero number
+     function number(number){
+        if(number>0){
+            return "positive"
+        }else if
+            (number<0){
+            return "negative"
+        }
+     }
+     console.log(number(5))
+    
+</script>
+</html>

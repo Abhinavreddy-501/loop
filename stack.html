@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Javascript uses a callstack to track the functions in a program. the call stack works on the Last In, First out(LIFO)
+        principle. This means that the recently called function will be the first to be completed. Whenever a function
+        is called, a new frame is added to the top of the stack.
+      </p>
+</body>
+<script>
+    // callstack
+      function first(){
+        return "first";
+      }
+      function second(){
+        return first()+"second"
+      }
+      second()
+</script>
+</html>

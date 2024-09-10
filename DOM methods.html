@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>DOM methods</h3>
+    <p id="demo">Helllo World</p>
+    <p id="demo1">Testing paragraph</p>
+    <button onclick="changetext()">Click me</button>
+    <div id="myDiv">color change</div>
+    <button onclick="changeColor()">click me</button>
+    <br>
+    <br>
+    <img id="myImage" src="https://assets.volvo.com/is/image/VolvoInformationTechnologyAB/blue-bus?qlt=82&wid=1024&ts=1660212095501&dpr=off&fit=constrain">
+    <button onclick="changeImage()">change image</button>
+
+    <!--className-->
+    <p class="demo">Paragraph1</p>
+    <p class="demo">Paragraph2</p>
+    <p class="demo">Paragraph3</p>
+    <button onclick="changeParagraph()">Change paragraph</button>
+
+    <div class="Mydiv1" style="width: 100px; height: 100px; background-color: azure;"></div>
+    <div class="Mydiv1" style="width: 100px; height: 100px; background-color: rgb(16, 218, 74);"></div>
+    <div class="Mydiv1" style="width: 100px; height: 100px; background-color: rgb(31, 7, 87);"></div>
+    <button onclick="changeDiv">Change Color</button>
+
+    <ul class="list">
+        <li class="child">coffee</li>
+        <li class="child">tea</li>
+    </ul>
+
+    <!---->
+
+    <script>
+    // const element=document.getElementByID('demo')
+    //element.innerHtml='Good Morning'
+     
+    document.getElementById('demo').innerHTML='Goood Morning'
+
+    //basic syntax 
+    function changetext(){
+        document.getElementById('demo1').innerHTML='goodmorning'
+    }
+
+   //with css properties 
+    function changeColor(){
+       const element=document.getElementById('myDiv')
+       element.style.fontSize="36px"
+       element.style.color="red"
+    } 
+
+    //with attribute
+
+    function changeImage(){
+        const element=docment.getElementbyId('myImage')
+        element.setAttribute('src',"https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/LT_471_%28LTZ_1471%29_Arriva_London_New_Routemaster_%2819522859218%29.jpg/1200px-LT_471_%28LTZ_1471%29_Arriva_London_New_Routemaster_%2819522859218%29.jpg")
+
+    }
+    //difference btn innerhtml,innertxt,and textcontent
+    const element=document.getElementById('example')
+    console.log('innerHtml:',element.innerHtml)
+    console.log('innerText:',element.innerText)
+    console.log('textcontent:',element.textcontent)
+
+  // class name
+      function changeParagraph(){
+        const elements=document.getElementsByClassname('demo')
+        for(const ele of elements)
+        ele.innerHtml="Change Paragraph"
+      }  
+      function changeDiv(){
+        const elements=document.getElementsByClassName('myDiv1')
+        for(const ele of elements){
+            ele.style.backgroundColor="red";
+        }
+      }
+      const elements=document.getElementsByClassName('list')[0]
+      elements.getElementsByClassName('child')[1].innerHTML="milk"
+
+
+   //tagname
+     const eles=document.getElementsByTagName('p')
+     //for (let i=0;i<eles.length;i++)
+     // eles[i].innerHTML="change para"
+     //}
+     for(const ele of eles){
+        ele.innerHTML="change para" 
+     }   
+
+     const headings=document.getElementsByTagName('h3')
+     for(const heading of headings){
+      heading.classList.add('heading')
+     }
+</script>
+</html>
+</body>
+</html>

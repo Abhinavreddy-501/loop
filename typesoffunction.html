@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Arrow Function</h3>
+    <p>Arrow function is a concise way of writing the function and it is introduce in ecma script </p>
+
+    <p>An anonymoous function in javascript is a function without a name. It is often used in 
+        situations where a function is needed temporarily, such as passing a function as an 
+        argument to another function
+    </p>
+
+    <p>In javascript, variables can have either global or local scope. Global scope means the 
+        variable is accessible throughout the entire program, while local scope means the variable is 
+        only accessible with in a specific block or function.
+    </p>
+
+
+    <p>A closure is the combination of a function bundled together (enclosed) with references to its 
+      surrounding state (the lexical environment). In other words, a closure gives you access to an outer 
+      function's scope from an inner function.
+    </p>
+
+    <p>In javascript, a pure is a function that, given the same input, will always returns the same output and
+      has no side affects(does not modify the state)
+    </p>
+</body>
+<script>
+   // Arrow function
+        const greet=()=> console.log("Good morning")
+        greet()
+
+
+   //Arrow function with parameters
+     const operators=(x,y,z)=>console.log(x+y+z);
+     operators(2,3,4)
+     
+     const sub=(a,b)=>{
+        return(a-b);
+     }
+    //  console.log('substraction of num is ',sub(4,2))
+     console.log(`Substraction of number is ${sub(3,1)}`)
+
+     const square=(num)=>{
+        return num*num;
+     }
+     console.log(`Square of the number is ${square(4)}`)
+
+     // arrow fn with default parameters
+      const greetname=(name="john")=>console.log(`Good morning ${name}`)
+      greetname()
+      greetname('sam')
+
+      const areaofrectangle=(l,b)=>{
+      return l*b;
+      }
+      console.log(`area of the rectangle ${ areaofrectangle(2,4)}`)
+
+    // Anonymous function
+       let add=function(x,y){
+        return x+y; 
+       }
+       console.log(`addition of number is ${add(3,4)}`)
+       
+       var hello=function(){
+        console.log(`hello from anonymous function`)
+       }
+       hello()
+
+
+   // global and local scope
+     //global scope
+      var global="This is a global variable";
+      function scope(){
+      console.log(global);
+      }
+      scope()
+
+    // //local scope
+    //  let globallet=function scopelet(){
+    //    console.log(globallet);
+    //  }  
+    //  scopelet()
+    
+
+    // closure function
+      // function outerfunction(){
+      //   var outer="this is outer variable";
+      //   function innerfunction(){
+      //   console.log(`outer ${outer}`)
+      //   }
+      //   return innerfunction();
+      // }
+      //   var =outerfunction();
+      //  closureExample();
+
+      function couter(){
+        var count=0;
+        function increment(){
+        count++;
+        console.log(`counter is ${count}`)
+        }
+        return increment();
+      }
+       let closureex=couter()
+       console.log(closureex) 
+
+
+     // Pure function
+       function purefunction (a,b){
+        return a+b;
+       } 
+       const result1=purefunction(2,3);
+       const result2=purefunction(2,3);
+       console.log('result1',result1,'result2',result2)
+</script>
+</html>

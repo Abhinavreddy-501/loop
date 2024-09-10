@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>loops task</h3>
+</body>
+<script>
+    // Multiplication table
+    let number=5;  
+      for(let z=1;z<=10;z++){
+      let result=number*z
+        console.log(number+'x'+z+'='+result)
+      }
+      console.log('===============')
+
+    // Sum of even numbers
+      let sum = 0;
+      for(let i=2; i<=50;i+=2){
+        sum+=i;
+      }
+      console.log("sum of even numbers between 1 and 50:",sum);
+
+      console.log('===============')
+
+    // sum of odd numbers
+     let sum1=0;
+     let num=1;
+      while(num<=20){
+        sum1+=num;
+        num+=2;
+      }
+      console.log("sum of odd numbers between 2 and 20:",sum1)
+
+      console.log('===============')
+     
+     //prime numbers between 2 to 20
+        let v = 2;
+        while(v<=20){
+          let Primenumber = true;
+          for (let j=2; j<=Math.sqrt(v);j++){
+            if(v%j===0){
+              Primenumber=false;
+              break;
+            }
+          }
+          if(Primenumber){
+            console.log(v);
+          }
+          v++;
+        }
+         console.log('==============')
+
+       // Factorial Calculation 
+        function factorial(y){
+          let result=1;
+          while(y>0) {
+            result*=y;
+            y--;
+          }
+          return result;
+        } 
+        let q=5;
+        let factorialresult =factorial(q);
+        console.log("factorial of "+q+":",factorialresult);
+    
+</script>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Type of operators</h3>
+    <ol>
+     <li>Arithmetic operator</li>
+     <li>Assignment operator</li>
+     <li>Comparison operator</li>
+     <li>string operator</li>
+     <li>logical operator</li>
+     <li>bitwise operator</li>
+     <li>Ternary operator</li>
+    </ol>
+</body>
+<script>
+//Arithmetic Operators 
+   let x=5;
+   let y=2;
+   console.log(x+y)
+   console.log(x-y)
+   console.log(x*y)
+   console.log(x/y)
+   console.log(x%y)  //it gives remainder
+
+//Assignment Oprators
+    let a=10
+    let b=5
+    console.log(a,b)
+    a+=b  //a=a+b
+    console.log(a)
+    
+    a-=b  //a=a-b
+    console.log(a)
+
+//Comparison operators
+    let p=10
+    let q=5
+    
+    let r=12
+    let s='12'
+    console.log(p>q)
+    console.log(p<q)
+    console.log(p>=q)
+    console.log(p<=q)
+    console.log(r==s)
+    console.log(r===s) // strict equality check the equality with data types 
+
+
+//unary Operator
+    let c=5;
+    console.log(c) //5
+    console.log(++c)//6
+    console.log(c) //6
+    console.log(--c)
+    console.log('post increment/decrement operator')
+    let d=7
+    console.log(d) //7
+    console.log(d++)
+    console.log(d) //8
+    console.log(d--)
+    console.log(d)  
+ 
+//Bitwise Operator
+   let e=5
+   let f=10
+   console.log(e&f)
+   console.log(e|f)
+   console.log(e^f)
+   
+//Logical ooperators(&&,||) 
+   let g=true
+   let h=false
+   
+   console.log(g&&h) 
+   console.log(g||h)
+   console.log(h&&h)
+
+//Ternary operator
+
+   let age=20
+   let vote=(age>=18)?'Yes You can vote':'You cannot vote'
+   console.log(vote)
+   
+   let random=12
+   let guess=(random==10)?'your guess is correct':'your guess is incorrect'
+   console.log(guess)
+
+   //let flower='pink'
+
+   let flower=prompt('Enter the name')
+   let guess_flower=(flower=='rose')?'correct':'incorrect'
+   console.log(guess_flower)
+ 
+ 
+//Date Methods
+
+   let currentdate=new date()
+   console.log('current date is', currentdate)
+   
+   let year=currentdate.getfullyear()
+   console.log('year is',year)
+
+   let month=currentdate.getmonth()
+   console.log('month is',month)
+
+   let hour=currentdate.gethours()
+   console.log('hour is',hour)
+
+   let minute=currentdate.getminutes()
+   console.log('minute is',minute)
+
+//Maths methods
+    console.log('===============')
+    console.log(MATH.PI)
+    console.log(MATH.sqrt(16))
+    console.log(MATH.pow(2,4))  
+    
+//round numbers
+    console.log(Math.round(5.7))
+    console.log(Math.ceil(5.8))
+    console.log(Math.floor(5.7))
+    console.log(Math.abs(-15))
+
+//random numbers
+    console.log(Math.random())
+    console.log(Math.random()*10+1)  
+    console.log(Math.max(1,3,2))
+    console.log(Math.min(1,3,2))   
+
+</script>
+</html>
